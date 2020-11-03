@@ -1,0 +1,353 @@
+html, body {
+  height: 100%;
+  margin: 0;
+} 
+ /* variables for ligth theme system default*/
+ body {
+  --text-color: rgb(7, 4, 4);
+  --row-color:rgb(241,243,250);
+  --bkg-color: rgb(255,255,255);
+  --bkg2-color: rgb(247,249,255);
+  --follower-color: rgb(132, 144, 191);
+  --overview-color: #868a96;
+  --Tfollower-color: #868a96;
+  --hr-color:#eee;
+  --toggle-color:#f1f3fa;
+  --slider-color: rgb(174, 179, 203);
+  background-color: rgb(255,255,255);
+   }
+   /* variables for dark theme toggle*/
+body .dark-theme {
+  --text-color: #eee;
+  --row-color:rgb(32,39,65);
+  --bkg-color:rgb(23,25,36);
+  --bkg2-color: rgb(26,28,43);
+  --follower-color: rgb(132, 144, 191);
+  --overview-color: #eee;
+  --Tfollower-color: #868a96;
+  --hr-color:#868a96;
+  --toggle-color:#202741;
+  --slider-color:linear-gradient(to right, #2b81c2 0%, #31d091 100%);
+}
+
+body.dark-theme {
+  background-color: rgb(23,25,36);
+}
+
+/* hover state Css */
+body .hov:hover {
+  --row-color:rgb(225,228,240);
+ }
+.dark-theme .hov:hover{
+  --row-color:rgb(40,50,70);
+}
+
+.slider:hover{
+  background: linear-gradient(to right, #2b81c2 0%, #31d091 100%);
+ }
+
+/* variables for dark theme system default*/
+@media (prefers-color-scheme: dark) { 
+  body {
+      --text-color: #eee;
+      --row-color:rgb(32,39,65);
+      --bkg-color:rgb(23,25,36);
+      --bkg2-color: rgb(26,28,43);
+      --follower-color: rgb(132, 144, 191);
+      --overview-color: #eee;
+      --Tfollower-color: #868a96;
+      --hr-color:#868a96;
+      --toggle-color:#202741;
+      --slider-color : linear-gradient(to right, #2b81c2 0%, #31d091 100%);
+      background-color: rgb(23,25,36);
+  }
+  /* variables for dark theme toggle*/
+  body .light-theme {
+      --text-color: rgb(32, 34, 44);
+      --row-color:rgb(241,243,250);
+      --bkg-color: rgb(255,255,255);
+      --bkg2-color: rgb(247,249,255);
+      --follower-color: rgb(132, 144, 191);
+      --overview-color:#868a96;
+      --Tfollower-color: #868a96;
+      --hr-color:#eee;
+      --toggle-color:#f1f3fa;
+      --slider-color: rgb(174, 179, 203);
+  }
+  body.light-theme {
+    background-color:rgb(255,255,255);
+  }
+  /* hover state Css */
+  body .hov:hover{
+    --row-color:rgb(40,50,70);
+}
+.light-theme .hov:hover{
+  --row-color:rgb(225,228,240);
+ }
+
+  .light-theme .slider:hover{
+  background: linear-gradient(to right, #2b81c2 0%, #31d091 100%);
+ }
+
+}
+/* hidden text section */
+.show {
+  display: inline;
+}
+.hide-show {
+  display: none;
+}
+.hiderow {
+  height: 6.9rem;
+}
+
+/* title section CSS styling */
+.parent{
+  padding: 30px 0px;
+  margin: auto 9.5%;
+}
+.header {
+margin: 0% 10.5%;
+color: var(--follower-color);
+}
+.header.label {
+  margin: 0px 0px;
+  padding-left: 0.35rem;
+}
+.header.overview {
+color: var( --overview-color);
+font-family: Arial, Helvetica, sans-serif;
+font-size: 1.6rem;
+padding: 1rem 0px;
+}
+.label {
+  color: var(--follower-color);
+  padding-right: 1rem;
+  font-size: 0.9rem;
+}
+.top-header{
+    display: inline-block;
+    color: var( --text-color);
+    padding-right: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.7rem;
+    margin: 0px 0px;
+    margin-left:1.05rem;
+    padding-left: 0.2rem;
+}
+
+/* horintal rule style */
+.line {
+  display: none;
+}
+.child {
+  display: inline-block;
+  margin-left: 0.5rem;
+  margin-right: 0;
+  padding-bottom: 0;
+  padding-left: 0;
+}
+.toggle {
+  float: right;
+  display: inline;
+  margin-right: 4.5rem;
+  margin-top: 0.5rem;
+   
+}
+
+/* card header styling */
+.card-header {
+  height: 0.06rem;
+  padding: 0.1rem;
+}
+.header-1 {
+  background-color:#008df8;
+}
+.header-2 {
+  background:-webkit-linear-gradient(65deg,rgb(252, 193, 84),rgba(190, 3, 141, 0.667));
+}
+.header-3 {
+  background-color: #c70020;
+}
+
+/*Bootstrap card section CSS */
+.rows {
+    margin: auto 9.5%;
+    text-align: center;
+}
+.row1, .row2 {
+    margin: 5% auto;
+    background: var(--row-color) ;
+    color: var( --text-color);
+   }
+.card-body.page {
+  padding-bottom: 10px;
+}
+.rows.last-section {
+  padding-bottom: 2.5rem;
+}
+
+/* using z-index for the body div colour */
+
+.top {
+    position: relative;  /*Parent MUST be relative*/
+    z-index: 9;
+    background: var(--bkg-color);
+    /*Set width/height of the div in 'parent'*/
+    width: 100%;
+    height: auto;
+     }
+.top:before {
+    content: "";
+    position: absolute; /*set 'child' to be absolute*/
+    z-index: -1;    /*Make this lower so text appears in front*/
+    
+    /*You can choose to align it left, right, top or bottom here*/
+    top: 0; right: 0; bottom: 69%; left: 0;
+    background: var(--bkg2-color);
+    border-bottom-left-radius: 1.1rem;
+    border-bottom-right-radius: 1.1rem;
+}
+
+/* positioning items in card */
+.flez {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.item1 {
+    flex-basis: 50%;
+    text-align:left;
+}
+.item2 {
+    flex-basis: 50%;
+    text-align: right;
+}
+
+/* card text styling */
+ .icon-text {
+  font-size: 0.75rem;
+  position: relative;
+  padding-left: 0.2rem;
+  color: var(--follower-color);
+}
+.cards-text {
+  font-size: 0.73rem;
+  color: var(--follower-color);
+  letter-spacing: 0.48em;
+  /* padding-bottom: 1rem; */
+}
+.row-text {
+  font-size: 0.87rem;
+  color: var(--follower-color);
+
+}
+.icon-up,.icon-down {
+    height: 0.45rem;
+    position: relative;
+    top: 0.17rem;
+}
+.card-num {
+  margin-bottom: 0px;
+  padding-top: 1.3rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 3.4rem;
+}
+.card-num1 {
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 1.8rem;
+}
+.first-row{
+  margin-bottom: 5px;
+}
+/* <!-- colour styling for all icons --> */
+.icon {
+  width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  top: 4px;
+ }
+ .icon.Square {
+  border-radius: 6.5px; 
+ }
+ .icon-row {
+   width: 1.2rem;
+  height: 1.2rem;
+  position: relative;
+  bottom: 7px;
+ }
+ .icon-row.Square {
+   border-radius: 6.5px;
+ } 
+.icon1 {
+    border-radius:7.3px;
+    background:-webkit-linear-gradient(65deg,rgb(252, 193, 84),rgba(190, 3, 141, 0.667));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+.icon-next1 {
+  color: #04a27e;
+  font-size: 0.7rem;
+}
+.icon-next2 {
+    color: #b53744;
+    font-size: 0.7rem;
+}
+.icon-up {
+    transform: rotate(180deg);
+   
+}
+/* toggle switch styling */
+.switch {
+    position: absolute;
+    display: inline-block;
+    width: 60px;
+    height: 31px;
+  }
+  /* Hide default HTML checkbox */
+  .switch input {
+    display: none;
+  }
+
+ /* The slider */
+ .slider {
+  position: absolute;
+  /* cursor: pointer; */
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: var(--slider-color);
+  background-color: var(--slider-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+/* child slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 23px; width: 23px; left: 4px; bottom: 4px;
+  background-color: var(--toggle-color);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(29px);
+  -ms-transform: translateX(29px);
+  transform: translateX(29px);
+}
+/* Rounded sliders parent */
+.slider.round {
+  border-radius: 34px;
+}
+/* inner slider child */
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+   
+ 

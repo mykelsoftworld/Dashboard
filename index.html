@@ -1,0 +1,320 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Boostrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.css" >
+    <link rel="stylesheet" href="css/styles.css">
+ 
+    <!-- Font Awesome Script-->
+    <script src="https://kit.fontawesome.com/fc23de59d2.js" crossorigin="anonymous"></script>
+
+    <title>oct challenge</title>
+
+    <!-- adapt to all screen size -->
+    <style>
+       @media only screen and (max-width: 992px) {
+        .top:before {
+        content: "";
+        position: absolute; 
+        z-index: -1;    
+         
+        /*You can choose to align it left, right, top or bottom here*/
+         top: 0; right: 0; bottom: 82%; left: 0;
+        background: var(--bkg2-color);
+        border-bottom-left-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+      } 
+    }
+
+      @media only screen and (max-width: 760px) {
+        .dark-theme .diff-status{
+          color: #eee;
+           
+        }
+        .diff-status {
+          color:  #04a27e;
+        }
+      
+        @media (prefers-color-scheme: dark){
+          .diff-status {
+            color: #eee; 
+          }
+          .light-theme .diff-status{
+            color:  #04a27e; 
+          }
+        }
+        body {
+          margin: 0;
+          padding: 0;
+        }
+        .top-header {
+          display: block;
+          position: relative;
+          right: 2rem;
+        }
+        .toggle {
+          display: block;
+          margin: auto 0 auto 1rem;
+          float: left;
+        } 
+        .line {
+            display: block;
+            border-style:none none groove none;
+            border-width: 0.15rem;
+            border-color: var(--hr-color);
+            /* margin:1rem 0.9rem .6rem 0.9rem ; */
+        }
+       .switch {
+        position: absolute;
+        margin: auto 0 ;
+        right: 9.5%;
+        display:inline;
+        float: right;
+      }
+      .child {
+        display: block;
+        margin-left: 0.6rem;
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-left: 0;
+      }
+      .top:before {
+        content: "";
+        position: absolute; /*set 'child' to be absolute*/
+        z-index: -1;    /*Make this lower so text appears in front*/
+        
+        /*You can choose to align it left, right, top or bottom here*/
+        top: 0; right: 0; bottom: 90.5%; left: 0;
+        background: var(--bkg2-color);
+        border-bottom-left-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+      }
+      .top-header{
+        font-size: 1.48rem 
+        }
+      .header.overview {
+        display: block;
+        position: relative;
+      }
+      .hide-show {
+        display: block;
+      }
+      .show.hide {
+        display: none;
+      }
+      .parent {
+        padding-bottom: 3rem;
+      }
+      .col-md-6 {
+        padding: 0px;
+      }
+      .label {
+        position: relative;
+        right: 1rem;
+      }
+       
+    } 
+    </style>
+
+</head>
+<body>
+    <div  id="topdiv" class="top">
+      <div class="parent">
+        <div class="child">
+          <p class="top-header">Social Media Dashboard</p>
+          <p class="header label ">Total Followers: 23,004</p>
+        </div>
+        <hr class="line">
+        <span class="toggle">
+          <span class="label text-colour">Dark Mode</span>
+          <span class="label-container">
+            <label class="switch" for="myCheck">
+              <input type="checkbox" name="checkbox" id="myCheck" class="btn-toggle">
+              <span class="slider round" ></span>
+            </label> 
+          </span>
+        </span>
+      </div>
+
+      <div class="row rows">
+        <div class="col-md-6 col-lg-3 ">
+          <div class="card border-0 row1 hov">
+            <div class="card-header header-1"></div>
+            <div class="card-body first-row">
+              <img class="icon" src="images/facebook.png">
+              <span class="icon-text">@nathanf</span>
+              <h1 class="card-num">1987</h1>
+              <p class="cards-text">FOLLOWERS</p>
+              <img class="icon-up" src="images/drop-green.png">
+              <span class="icon-next1 diff-status">12 Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 ">
+          <div class="card border-0 row1 hov">
+            <div class="card-header header-1"></div>
+            <div class="card-body">
+              <img class="icon" src="images/twitter.png">
+              <span class="icon-text">@nathanf</span>
+              <h1 class="card-num">1044</h1>
+              <p class="cards-text">FOLLOWERS</p>
+              <img class="icon-up" src="images/drop-green.png">
+              <span class="icon-next1">99 Today</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 row1 hov">
+            <div class="card-header header-2"></div>
+            <div class="card-body">
+              <img class="icon Square" src="images/square.png">
+              <span class="icon-text">@realnathanf</span>
+              <h1 class="card-num">11k</h1>
+              <p class="cards-text">FOLLOWERS</p>
+              <img class="icon-up" src="images/drop-green.png">
+              <span class="icon-next1">1099 Today</span>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row1 hov">
+              <div class="card-header header-3">
+              </div>
+              <div class="card-body">
+                <img class="icon" src="images/circle.png">
+                <span class="icon-text">Nathan F.</span>
+                <h1 class="card-num">8239</h1>  
+                <p class="cards-text">SUBSCRIBERS</p>
+                <img class="icon-down" src="images/drop-red.png">
+                <span class="icon-next2">144 Today</span>
+              </div>
+            </div>
+          </div>
+      </div>
+
+      <p class="header overview">Overview -Today</p>
+
+        <div class="row rows">
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row2 hov">
+              <div class="card-body page flez">
+                <div class="item1"><p class="row-text">Page Views</p></div>
+                <img class="icon-row" src="images/facebook.png">
+                <div class="item1"><h4 class="card-num1">87</h4></div>
+                <div class="item2">
+                  <img class="icon-up" src="images/drop-green.png">
+                  <span class="icon-next1">3%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row2 hov">
+              <div class="card-body page flez">
+                <div class="item1"><p class="row-text ">Likes</p></div>
+                <img class=" icon-row" src="images/facebook.png">
+                <div class="item1 "><h4 class="card-num1">52</h4></div>
+                <div class="item2">
+                  <img class="icon-down" src="images/drop-red.png">
+                  <span class="icon-next2">2%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card border-0 row2 hov">
+            <div class="card-body page flez">
+              <div class="item1"><p class="row-text">Likes</p></div>
+              <img class="icon-row Square" src="images/square.png">
+              <div class="item1"><h4 class="card-num1">5462</h4></div>
+              <div class="item2">
+                <img class="icon-up" src="images/drop-green.png">
+                <span class="icon-next1">2257%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row2 hov">
+              <div class="card-body page flez">
+                <div class="item1"><p class="row-text">Profile Views</p></div>
+                <img class="icon-row Square" src="images/square.png">
+                <div class="item1"><h4 class="card-num1">52k</h4></div>
+                <div class="item2">
+                  <img class="icon-up" src="images/drop-green.png">
+                  <span class="icon-next1">1375%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        
+        <div class="row rows last-section">
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0 row2 hov hiderow">
+                <div class="card-body page flez">
+                  <div class="item1"><p class="row-text">Retweets</p></div>
+                  <img class=" icon-row" src="images/twitter.png">
+                  <div class="item1">
+                    <h4 class="card-num1 show" id="shown">117</h4>
+                    <h4 class="card-num1 show hide" id="hidden"></h4>
+                  </div>
+                  <div class="item2">
+                    <img class="icon-up" src="images/drop-green.png">
+                    <span class="icon-next1">303%</span>
+                  </div>
+                  <div class="item1"><h4 class="card-num1 hide-show">7</h4></div>
+                </div>
+              </div> 
+            </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row2 hov">
+              <div class="card-body page flez">
+                <div class="item1"><p class="row-text">Likes</p></div>
+                <img class=" icon-row" src="images/twitter.png">
+                <div class="item1"><h4 class="card-num1">507</h4></div>
+                <div class="item2">
+                  <img class="icon-up" src="images/drop-green.png">
+                  <span class="icon-next1">553%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-3">
+            <div class="card border-0 row2 hov">
+              <div class="card-body page flez">
+                <div class="item1"><p class="row-text">Likes</p></div>
+                <img class="icon-row" src="images/circle.png">
+                <div class="item1"><h4 class="card-num1">107</h4></div>
+                <div class="item2">
+                  <img class="icon-down" src="images/drop-red.png">
+                  <span class="icon-next2">19%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="card border-0 row2 hov">
+                <div class="card-body page flez">
+                  <div class="item1"><p class="row-text">Total Views</p></div>
+                  <img class="icon-row" src="images/circle.png">
+                  <div class="item1"><h4 class="card-num1">1407</h4></div>
+                  <div class="item2">
+                    <img class="icon-down" src="images/drop-red.png">
+                    <span class="icon-next2">12%</span>
+                  </div>  
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+  <script src="app.js"></script>
+      
+</body>
+</html>

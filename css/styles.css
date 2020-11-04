@@ -218,11 +218,11 @@ padding: 1rem 0px;
     align-items: center;
 }
 .item1 {
-    flex-basis: 50%;
+    flex-basis: 65%;
     text-align:left;
 }
 .item2 {
-    flex-basis: 50%;
+    flex-basis: 35%;
     text-align: right;
 }
 

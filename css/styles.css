@@ -226,6 +226,9 @@ padding: 1rem 0px;
     text-align: right;
 }
 
+.custom-card-body {
+  padding: 1.25rem 1.21rem;
+}
 /* card text styling */
  .icon-text {
   font-size: 0.75rem;
